@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classical Dance Classes in Kuwait | Bharatanatyam & Kuchipudi — Bhavayami</title>
+    <meta name="description" content="Learn Bharatanatyam & Kuchipudi in Kuwait with authentic Kerala teachers at Bhavayami. Gurukula-style training for children. Book a free trial class today!">
+
+    <!--
+        Google Fonts: Inter — closest open-source match to Apple's SF Pro.
+        On Apple devices the system font (-apple-system) takes precedence automatically.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,300;1,14..32,400&family=Cormorant+Garamond:ital,wght@0,600;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- =================================================================
+     NAVIGATION — Glassmorphism, fixed, full-width
+     ================================================================= -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+
+    <!-- Logo (top-left) -->
+    <a class="nav-brand" href="#home" aria-label="Bhavayami home">
+        <img src="images/logo.png" alt="Bhavayami" class="nav-logo-img">
+    </a>
+
+    <!-- Desktop links (right-aligned) — pill-shaped glass buttons -->
+    <ul class="nav-list" id="navList" role="list">
+        <li><a href="#home"    class="nav-link active" data-nav="home">Home</a></li>
+        <li><a href="#gallery" class="nav-link"         data-nav="gallery">Gallery</a></li>
+        <li><a href="#classes" class="nav-link"         data-nav="classes">Classes</a></li>
+        <li><a href="#enroll"  class="nav-link"         data-nav="enroll">Enroll</a></li>
+    </ul>
+
+    <!-- Mobile hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+
+</nav><!-- /#navbar -->
+
+
+<!-- =================================================================
+     HOME SECTION
+     Contains:
+       • Hero (Section 1) — full-screen, glassmorphism bio card
+       • Scroll Reveal (Section 2) — image placeholder + stats card
+     ================================================================= -->
+<section id="home">
+
+    <!-- Ambient decorative orbs -->
+    <div class="bg-orb orb-home-1" aria-hidden="true"></div>
+    <div class="bg-orb orb-home-2" aria-hidden="true"></div>
+
+    <!-- ─────────────────────────────────────────────────────────────
+         HERO — Section 1
+         Full-screen. Centered glassmorphism card with bio text.
+         ───────────────────────────────────────────────────────────── -->
+    <div class="hero" id="hero">
+
+<!-- ── Hero layout ──────────────────────────────────────────────
+             Left col  │  Right col
+             ──────────┼────────────────────────────────────────────
+             Bhavayami │  ┐
+             (text,    │  │  Established 2018 · Classical Dance
+             left-     │  │  Academy bio card
+             aligned)  │  │  (starts where Bhavayami text ends,
+             ──────────┤  │   stretches to right edge)
+             Photo box │  │
+             (below    │  │
+             the text) │  ┘
+        ──────────────────────────────────────────────────────────────── -->
+        <div class="hero-parallax" id="heroParallax">
+          <div class="hero-layout">
+
+            <!-- LEFT COLUMN: brand text (top) + photo slideshow (bottom) -->
+            <div class="hero-left-col">
+
+                <div class="hero-brand-display" data-reveal="fade">
+                    <h1 class="hero-brand-text" aria-label="Bhavayami">
+                        Bhavayami
+                    </h1>
+                    <p class="hero-brand-sub">'A space for an art enthusiast'</p>
+                </div>
+
+                <!-- Photo slideshow — directly below brand text -->
+                <div class="hero-img-panel glass-card" aria-label="Smt. Ambily Rajeesh photos">
+                    <div class="hero-slideshow" id="heroSlideshow">
+                        <img src="images/hero/h01.webp" alt="Smt. Ambily Rajeesh — classical pose" class="hero-slide active" loading="eager">
+                        <img src="images/hero/h02.webp" alt="Smt. Ambily Rajeesh — classical mudra" class="hero-slide"        loading="lazy">
+                    </div>
+                </div>
+
+            </div><!-- /hero-left-col -->
+
+            <!-- RIGHT COLUMN: bio card — starts after Bhavayami text, goes to right edge -->
+            <article class="glass-card hero-card" data-reveal="fade" aria-label="About Smt. Ambily Rajeesh">
+
+                <!-- Accent line at top of card -->
+                <div class="card-top-bar" aria-hidden="true"></div>
+
+                <span class="eyebrow">Established 2018 &nbsp;·&nbsp; Classical Dance Academy</span>
+
+                <h2 class="hero-title">
+                    A Luminary in<br>
+                    <em>Classical Dance</em>
+                </h2>
+
+                <div class="title-rule" aria-hidden="true"></div>
+
+                <!-- Two-column bio grid -->
+                <div class="hero-bio-grid">
+                    <div class="bio-col">
+                        <p>With over <strong>25 years</strong> of dedication to the art of classical dance,
+                        <strong>Smt. Ambily Rajeesh</strong> has woven her passion into a vibrant tapestry
+                        as a teacher, performer, and choreographer. Her journey led her to establish
+                        <strong>Bhavayami</strong>, a prestigious institution that shines as a guiding light
+                        for aspiring dancers eager to hone their skills.</p>
+
+                        <p>An SAAC-accredited artist in Kuchipudi, Smt. Ambily's accolades include the
+                        esteemed <strong>Sree Sankaracharya Award (2005)</strong> and the
+                        <strong>Kerala Nruthya Mayuri Puraskar (2020)</strong>. Her academic pursuits are
+                        equally impressive, holding a postgraduate degree in English Literature and a
+                        Diploma in Kuchipudi from REVA University, Bangalore.</p>
+                    </div>
+
+                    <div class="bio-col">
+                        <p>From the tender age of five, she trained under the watchful eye of
+                        <strong>Smt. Sudha Peethambaran</strong>, mastering Bharatanatyam, Kuchipudi, and
+                        Mohiniyattam. Her talent shone brightly in youth festivals, culminating in a
+                        <strong>state-level victory in Bharatanatyam in 2003</strong>.</p>
+
+                        <p>Since 2014, she has deepened her understanding of Kuchipudi under
+                        <strong>Smt. Geetha Padmakumar</strong>, while continuing her Bharatanatyam
+                        studies with <strong>Smt. Kalakshethra Prameela Hariharan</strong> and
+                        <strong>Sri. Kalakshethra Hariharan</strong>. At Bhavayami, Smt. Ambily nurtures
+                        every student — ensuring the legacy of classical dance continues to flourish.</p>
+                    </div>
+                </div><!-- /hero-bio-grid -->
+
+                <!-- Achievement chips -->
+                <div class="award-chips" role="list" aria-label="Awards and recognition">
+                    <div class="award-chip" role="listitem"><span class="chip-dot" aria-hidden="true"></span>SAAC Accredited Artist</div>
+                    <div class="award-chip" role="listitem"><span class="chip-dot" aria-hidden="true"></span>Sree Sankaracharya Award 2005</div>
+                    <div class="award-chip" role="listitem"><span class="chip-dot" aria-hidden="true"></span>Kerala Nruthya Mayuri 2020</div>
+                    <div class="award-chip" role="listitem"><span class="chip-dot" aria-hidden="true"></span>25+ Years of Mastery</div>
+                </div>
+
+            </article><!-- /hero-card -->
+
+          </div><!-- /hero-layout -->
+        </div><!-- /hero-parallax -->
+
+    </div><!-- /hero -->
+
+
+    <!-- ─────────────────────────────────────────────────────────────
+         SECTION 2 — Scroll Reveal
+         Left: dancer image placeholder  |  Right: glass info card
+         ───────────────────────────────────────────────────────────── -->
+    <div class="reveal-section">
+        <div class="reveal-inner">
+
+            <!-- LEFT: Story slideshow -->
+            <div class="reveal-left" data-reveal="slide-left">
+                <div class="story-slideshow-wrap glass-card" id="storySlideshow">
+                    <img src="images/story/s01.webp" class="story-slide active" loading="eager" alt="Bhavayami dance">
+                    <img src="images/story/s02.webp" class="story-slide" loading="lazy" alt="Bhavayami dance">
+                    <img src="images/story/s03.webp" class="story-slide" loading="lazy" alt="Bhavayami dance">
+                </div>
+            </div>
+
+            <!-- RIGHT: Glass card with Bhavayami story -->
+            <div class="reveal-right" data-reveal="slide-right">
+                <div class="glass-card reveal-card">
+
+                    <span class="eyebrow">Our Story</span>
+                    <h2 class="reveal-heading">Where Passion<br>Meets Purpose</h2>
+                    <div class="reveal-rule" aria-hidden="true"></div>
+
+                    <p class="reveal-body">Bhavayami, since its inception in <strong>2018</strong>, has
+                    blossomed into a vibrant hub for aspiring dancers, igniting passion and creativity in
+                    a new generation. With its innovative classes, the institution has reached
+                    <strong>over 100 students</strong> from various corners of the globe, breaking down
+                    barriers and uniting dance enthusiasts.</p>
+
+                    <p class="reveal-body">We are thrilled to announce the launch of
+                    <strong>new classes in Kuwait</strong>, marking another exciting chapter in
+                    Bhavayami's journey to celebrate and elevate the art of dance!</p>
+
+                    <!-- Stats row -->
+                    <div class="stats-row" aria-label="Key numbers">
+                        <div class="stat-item">
+                            <div class="stat-val-row">
+                                <span class="stat-num" data-count="100" aria-label="100 plus">0</span><span class="stat-suffix">+</span>
+                            </div>
+                            <span class="stat-lbl">Global Students</span>
+                        </div>
+                        <div class="stat-sep" aria-hidden="true"></div>
+                        <div class="stat-item">
+                            <span class="stat-num" data-count="2018" aria-label="Founded in 2018">0</span>
+                            <span class="stat-lbl">Year Founded</span>
+                        </div>
+                        <div class="stat-sep" aria-hidden="true"></div>
+                        <div class="stat-item">
+                            <div class="stat-val-row">
+                                <span class="stat-num" data-count="25" aria-label="25 plus">0</span><span class="stat-suffix">+</span>
+                            </div>
+                            <span class="stat-lbl">Years Expertise</span>
+                        </div>
+                    </div>
+
+                </div><!-- /reveal-card -->
+            </div><!-- /reveal-right -->
+
+        </div><!-- /reveal-inner -->
+    </div><!-- /reveal-section -->
+
+</section><!-- /#home -->
+
+
+<!-- =================================================================
+     GALLERY SECTION
+     Thumbnail strip (left) + large display area (right)
+     Images auto-advance every 3 s; click thumbnail to jump.
+     ================================================================= -->
+<section id="gallery" aria-label="Gallery">
+
+    <div class="bg-orb orb-gallery" aria-hidden="true"></div>
+
+    <!-- Section heading -->
+    <div class="section-header" data-reveal="fade">
+        <span class="eyebrow">Visual Stories</span>
+        <h2 class="section-title">Gallery</h2>
+        <p class="section-sub">Moments frozen in motion — a glimpse into the world of Bhavayami</p>
+    </div>
+
+    <!-- Two-column gallery layout -->
+    <div class="gallery-layout">
+
+        <!-- Left: scrollable thumbnail strip (built by JS) -->
+        <div class="gallery-thumbs" id="galleryThumbs" role="list" aria-label="Image thumbnails"></div>
+
+        <!-- Right: main display -->
+        <div class="gallery-display glass-card">
+            <div class="display-inner">
+                <img id="mainGalleryImg" src="" alt="Gallery image" class="display-img" loading="eager">
+                <div class="display-overlay">
+                    <span id="displayCaption" class="display-caption-text"></span>
+                </div>
+                <button class="gal-arrow gal-prev" id="galPrev" aria-label="Previous image">&#8592;</button>
+                <button class="gal-arrow gal-next" id="galNext" aria-label="Next image">&#8594;</button>
+            </div>
+            <!-- Dot indicators (built by JS) -->
+            <div class="gal-dots" id="galDots" aria-label="Image indicators"></div>
+        </div>
+
+    </div><!-- /gallery-layout -->
+
+</section><!-- /#gallery -->
+
+
+<!-- =================================================================
+     CLASSES SECTION
+     Bharatanatyam: image left, text right
+     Kuchipudi:     text left, image right
+     ================================================================= -->
+<section id="classes" aria-label="Our Classes">
+
+    <!-- Section heading -->
+    <div class="section-header" data-reveal="fade">
+        <span class="eyebrow">Learn With Us</span>
+        <h1 class="section-title">Classical Dance Classes in Kuwait</h1>
+        <p class="section-sub">Bharatanatyam &amp; Kuchipudi lessons in Kuwait — authentic <em>Gurukula</em>-style training rooted in Kerala heritage, led by a qualified Indian dance teacher</p>
+    </div>
+
+    <!-- ── Bharatanatyam — image LEFT, text RIGHT ── -->
+    <div class="class-block">
+
+        <div class="class-img-col" data-reveal="slide-left">
+            <div class="class-img-wrap glass-card">
+                <img src="images/full/bharata.webp" alt="Bharatanatyam classical dance student in Araimandi pose at Bhavayami Dance School Kuwait" class="class-photo" loading="lazy">
+                <span class="class-img-badge">Bharatanatyam</span>
+            </div>
+        </div>
+
+        <div class="class-text-col" data-reveal="slide-right">
+            <div class="glass-card class-info-card">
+                <span class="dance-form-tag">Bharatanatyam Classes in Kuwait</span>
+                <h2 class="class-name">Bharatanatyam</h2>
+                <div class="class-rule" aria-hidden="true"></div>
+                <p class="class-desc">Often described as the "fire dance," Bharatanatyam is one of the oldest
+                and most popular classical styles. Rooted in the temples of South India, it teaches children
+                discipline, focus, and grace through geometric precision and expressive storytelling — a living
+                thread connecting your child to their Kerala heritage while living in Kuwait.</p>
+                <ul class="class-list" aria-label="What you will learn">
+                    <li>Adavus, Mudras &amp; <em>Abhinaya</em> — expression and emotion</li>
+                    <li>Classical compositions: Alarippu, Jatiswaram, Varnam &amp; Tillana</li>
+                    <li>The iconic <em>Araimandi</em> (half-sit) posture and geometric footwork</li>
+                    <li>Carnatic music theory for a complete understanding of rhythm</li>
+                </ul>
+                <a href="#enroll" class="btn-glass">Book a Trial Class <span class="btn-glass-arrow">→</span></a>
+            </div>
+        </div>
+
+    </div><!-- /class-block Bharatanatyam -->
+
+    <!-- ── Kuchipudi — text LEFT, image RIGHT ── -->
+    <div class="class-block class-block-rev">
+
+        <div class="class-text-col" data-reveal="slide-left">
+            <div class="glass-card class-info-card">
+                <span class="dance-form-tag">Kuchipudi Classes in Kuwait</span>
+                <h2 class="class-name">Kuchipudi</h2>
+                <div class="class-rule" aria-hidden="true"></div>
+                <p class="class-desc">Kuchipudi is where dance becomes storytelling. Faster and more
+                theatrical than Bharatanatyam, it blends pure rhythm with acting — making it especially
+                engaging for young learners. Taught by Smt. Ambily Rajeesh, an SAAC-accredited
+                Kuchipudi artist trained under legendary Gurus in Kerala, every class carries the
+                authenticity of true <em>Gurukula</em>-style training.</p>
+                <ul class="class-list" aria-label="What you will learn">
+                    <li>Flowing movements and expressive <em>Abhinaya</em></li>
+                    <li>The iconic <em>Tarangam</em> — balancing on a brass plate with a pot of water</li>
+                    <li>Yakshagana-style dramatic storytelling and presentation</li>
+                    <li>The <em>Kacham</em> costume draping and its cultural significance</li>
+                </ul>
+                <a href="#enroll" class="btn-glass">Book a Trial Class <span class="btn-glass-arrow">→</span></a>
+            </div>
+        </div>
+
+        <div class="class-img-col" data-reveal="slide-right">
+            <div class="class-img-wrap glass-card">
+                <img src="images/full/g09.webp" alt="Kuchipudi dance performance by student at Bhavayami Indian classical dance school Kuwait" class="class-photo" loading="lazy">
+                <span class="class-img-badge">Kuchipudi</span>
+            </div>
+        </div>
+
+    </div><!-- /class-block Kuchipudi -->
+
+</section><!-- /#classes -->
+
+
+<!-- =================================================================
+     ENROLL / CONTACT SECTION
+     Left:  contact details + social links + embedded Google Map
+     Right: contact form with glow-hover submit button
+     ================================================================= -->
+<section id="enroll" aria-label="Enroll and Contact">
+
+    <div class="bg-orb orb-enroll" aria-hidden="true"></div>
+
+    <!-- Section heading -->
+    <div class="section-header" data-reveal="fade">
+        <span class="eyebrow">Give Your Child the Gift of Samskaram</span>
+        <h2 class="section-title">Book a Free Trial Class</h2>
+        <p class="section-sub">Message us on WhatsApp or fill the form below — classes are limited. Bhavayami Dance School, Mangaf, Kuwait.</p>
+    </div>
+
+    <div class="enroll-grid">
+
+        <!-- LEFT: Contact info + social + map -->
+        <div class="glass-card enroll-info" data-reveal="slide-left">
+
+            <h3 class="info-title">Bhavayami School of Dance</h3>
+
+            <div class="info-row">
+                <span class="info-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </span>
+                <div class="info-text">
+                    <strong>Location</strong>
+                    <p>Kalasadan Auditorium, Block-4,<br>Mangaf, Kuwait</p>
+                </div>
+            </div>
+
+            <div class="info-row">
+                <span class="info-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                </span>
+                <div class="info-text">
+                    <strong>Phone</strong>
+                    <p><a href="tel:+96555949543">+965 55949543</a></p>
+                </div>
+            </div>
+
+            <div class="info-row">
+                <span class="info-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </span>
+                <div class="info-text">
+                    <strong>Email</strong>
+                    <p><a href="mailto:schoolofdancebhavayami@gmail.com">schoolofdancebhavayami@gmail.com</a></p>
+                </div>
+            </div>
+
+            <!-- Embedded Google Map — Mangaf, Kuwait (shown first, in full colour) -->
+            <div class="map-wrap">
+                <iframe
+                    src="https://maps.google.com/maps?q=Kalasadan+Auditorium,+Block+4,+Mangaf,+Kuwait&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="220"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Bhavayami School of Dance — Kalasadan Auditorium, Mangaf, Kuwait">
+                </iframe>
+            </div>
+
+            <!-- Social links — icon-only squares, below the map -->
+            <div class="social-group">
+                <p class="social-label">Follow &amp; Connect</p>
+                <div class="social-btns">
+
+                    <a href="https://www.instagram.com/bhavayamischoolofdance" target="_blank" rel="noopener noreferrer" class="social-pill insta" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                        </svg>
+                    </a>
+
+                    <a href="#" class="social-pill fb" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+
+                    <a href="https://wa.me/96555949543" target="_blank" rel="noopener noreferrer" class="social-pill wa" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                    </a>
+
+                </div>
+            </div><!-- /social-group -->
+
+        </div><!-- /enroll-info -->
+
+
+        <!-- RIGHT: Contact form -->
+        <div class="glass-card enroll-form-col" data-reveal="slide-right">
+
+            <h3 class="form-heading">Enquire About Classes</h3>
+            <p class="form-sub">Interested in Bharatanatyam or Kuchipudi lessons in Kuwait? We&rsquo;d love to hear from you.</p>
+
+            <form id="contactForm" class="contact-form" novalidate aria-label="Contact form">
+
+                <div class="form-field">
+                    <label for="cName">Name <span class="req" aria-hidden="true">*</span></label>
+                    <input type="text"  id="cName"  name="name"  placeholder="Your full name"       required autocomplete="name">
+                </div>
+
+                <div class="form-field">
+                    <label for="cEmail">Email <span class="req" aria-hidden="true">*</span></label>
+                    <input type="email" id="cEmail" name="email" placeholder="you@example.com"      required autocomplete="email">
+                </div>
+
+                <div class="form-field">
+                    <label for="cPhone">Phone Number <span class="req" aria-hidden="true">*</span></label>
+                    <input type="tel"   id="cPhone" name="phone" placeholder="+965 XXXX XXXX"       required autocomplete="tel">
+                </div>
+
+                <button type="submit" class="btn-submit" id="submitBtn">
+                    <span class="btn-label">Send Message</span>
+                    <span class="btn-arrow" aria-hidden="true">→</span>
+                    <!-- Glow layer — animated on hover via CSS -->
+                    <span class="btn-glow" aria-hidden="true"></span>
+                </button>
+
+            </form>
+
+            <!-- Success state (shown after form submit) -->
+            <div id="formSuccess" class="form-success" hidden aria-live="polite">
+                <div class="success-ring" aria-hidden="true">
+                    <span class="success-check">&#10003;</span>
+                </div>
+                <h4>Message Sent!</h4>
+                <p>Thank you for reaching out. We&rsquo;ll get back to you within 24 hours.</p>
+            </div>
+
+        </div><!-- /enroll-form-col -->
+
+    </div><!-- /enroll-grid -->
+
+</section><!-- /#enroll -->
+
+
+<!-- =================================================================
+     FOOTER
+     ================================================================= -->
+<footer id="site-footer" role="contentinfo">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <img src="images/logo.png" alt="Bhavayami" class="footer-logo-img">
+        </div>
+        <p class="footer-tag">Preserving the sacred tradition of Indian Classical Dance</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="#home">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#classes">Classes</a>
+            <a href="#enroll">Enroll</a>
+        </nav>
+        <p class="footer-copy">&copy; 2024 Bhavayami. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
