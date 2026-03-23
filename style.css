@@ -1586,8 +1586,9 @@ input, select, textarea { font-family: inherit; }
     /* Hero: stack on mobile */
     .hero-layout { grid-template-columns: 1fr; }
     .hero-left-col { width: 100%; }
-    .hero-brand-display { margin-top: 20px; }
+    .hero-brand-display { margin-top: 20px; padding-bottom: 2em; }
     .hero-brand-text { white-space: normal; }
+    .hero-brand-sub { position: static; white-space: normal; font-size: 1rem; margin-top: 8px; }
     .hero-img-panel { width: 100%; height: 260px; border-radius: 14px; }
     .hero-card { height: auto; padding: 26px 18px; margin-left: 0; width: 100%; }
     .hero-title { font-size: 2rem; }
