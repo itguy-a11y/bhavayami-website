@@ -1588,7 +1588,7 @@ input, select, textarea { font-family: inherit; }
     .hero-left-col { width: 100%; }
     .hero-brand-display { margin-top: 20px; padding-bottom: 3em; }
     .hero-brand-text { white-space: normal; }
-    .hero-brand-sub { left: 64%; right: 0; white-space: normal; font-size: 0.75rem; }
+    .hero-brand-sub { left: 50%; right: 0; white-space: normal; font-size: 0.75rem; }
     .hero-img-panel { width: 100%; height: 260px; border-radius: 14px; }
     .hero-card { height: auto; padding: 26px 18px; margin-left: 0; width: 100%; }
     .hero-title { font-size: 2rem; }
