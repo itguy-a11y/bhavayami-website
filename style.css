@@ -1589,8 +1589,7 @@ input, select, textarea { font-family: inherit; }
     .hero-brand-display { margin-top: 20px; }
     .hero-brand-text { white-space: normal; }
     .hero-img-panel { width: 100%; height: 260px; border-radius: 14px; }
-    .hero-card { height: auto; padding: 26px 18px; }
-    .hero-card { padding: 26px 18px; }
+    .hero-card { height: auto; padding: 26px 18px; margin-left: 0; width: 100%; }
     .hero-title { font-size: 2rem; }
     .award-chips { flex-direction: column; gap: 7px; }
 
