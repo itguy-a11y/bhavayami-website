@@ -1540,8 +1540,8 @@ input, select, textarea { font-family: inherit; }
     .hero-card            { margin-left: 0; }
     /* Shrink brand-display to text width so left:64% still lands on "y" */
     .hero-brand-display   { width: fit-content; }
-    /* Tagline: nudge right towards "a", and push below the text baseline */
-    .hero-brand-sub       { left: 68%; right: 0; white-space: normal; top: 100%; bottom: auto; margin-top: 8px; }
+    /* Tagline: smaller font, sit at descender level of "y" */
+    .hero-brand-sub       { left: 68%; right: 0; white-space: normal; top: 100%; bottom: auto; margin-top: -14px; font-size: 0.78rem; }
 }
 
 
