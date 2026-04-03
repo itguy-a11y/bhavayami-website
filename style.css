@@ -1538,6 +1538,8 @@ input, select, textarea { font-family: inherit; }
     .hero-img-panel       { width: 100%; }
     /* Bio card fills the full right column — no left offset needed */
     .hero-card            { margin-left: 0; }
+    /* Tagline: constrain inside left column so it doesn't bleed into bio card */
+    .hero-brand-sub       { right: 0; white-space: normal; }
 }
 
 
