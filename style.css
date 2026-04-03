@@ -1541,7 +1541,7 @@ input, select, textarea { font-family: inherit; }
     /* Shrink brand-display to text width so left:64% still lands on "y" */
     .hero-brand-display   { width: fit-content; }
     /* Tagline: sit at descender level of "y", no wrap */
-    .hero-brand-sub       { left: 68%; white-space: nowrap; top: 100%; bottom: auto; margin-top: -14px; }
+    .hero-brand-sub       { left: 68%; white-space: nowrap; top: 100%; bottom: auto; margin-top: -14px; font-size: 19px; }
 }
 
 
