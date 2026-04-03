@@ -1526,10 +1526,18 @@ input, select, textarea { font-family: inherit; }
 }
 
 
-/* ── 13a. Responsive — Laptop (≤ 1440 px) ───────────────────────────── */
-@media (max-width: 1440px) {
-    /* Reduce left margin on bio card so it doesn't squish on laptops */
-    .hero-card { margin-left: 80px; }
+/* ── 13a. Responsive — Laptop (1025 px – 1440 px) ───────────────────── */
+@media (max-width: 1440px) and (min-width: 1025px) {
+    /* Switch from max-content/1fr to percentage split so both columns
+       get a fair share of the laptop screen */
+    .hero-layout          { grid-template-columns: 45% 55%; }
+    .hero-left-col        { width: 100%; }
+    /* Scale brand text so it fits inside the 45% column */
+    .hero-brand-text      { font-size: clamp(4.5rem, 7.5vw, 9rem); }
+    /* Photo box fills the left column (no more 125% overflow) */
+    .hero-img-panel       { width: 100%; }
+    /* Bio card fills the full right column — no left offset needed */
+    .hero-card            { margin-left: 0; }
 }
 
 
