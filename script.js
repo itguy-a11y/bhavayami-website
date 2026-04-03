@@ -519,6 +519,39 @@ function initStorySlideshow() {
 }
 
 /* ──────────────────────────────────────────────────────────────────── */
+/* ──────────────────────────────────────────────────────────────────── */
+/* 11. SCROLL PROGRESS BAR & BACK TO TOP                                */
+/* ──────────────────────────────────────────────────────────────────── */
+function initScrollExtras() {
+    const progressBar = document.getElementById('scrollProgress');
+    const backToTop   = document.getElementById('backToTop');
+
+    function onScroll() {
+        const scrolled = window.scrollY;
+        const total    = document.documentElement.scrollHeight - window.innerHeight;
+
+        /* Progress bar width */
+        if (progressBar && total > 0) {
+            progressBar.style.width = ((scrolled / total) * 100).toFixed(2) + '%';
+        }
+
+        /* Back-to-top visibility: show after 400 px */
+        if (backToTop) {
+            backToTop.classList.toggle('visible', scrolled > 400);
+        }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll(); /* run once on load */
+
+    if (backToTop) {
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
     initNav();            /* Navigation: hamburger, scroll-darken, active link */
     initGallery();        /* Gallery: thumbs, dots, autoplay, arrows            */
@@ -527,4 +560,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();    /* Contact form validation & submit                   */
     initHeroSlideshow();  /* Hero photo crossfade slideshow                     */
     initStorySlideshow(); /* Our Story section photo crossfade slideshow        */
+    initScrollExtras();   /* Scroll progress bar + back-to-top button           */
 });

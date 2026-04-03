@@ -1526,13 +1526,20 @@ input, select, textarea { font-family: inherit; }
 }
 
 
+/* ── 13a. Responsive — Laptop (≤ 1440 px) ───────────────────────────── */
+@media (max-width: 1440px) {
+    /* Reduce left margin on bio card so it doesn't squish on laptops */
+    .hero-card { margin-left: 80px; }
+}
+
+
 /* ── 13. Responsive — Tablet (≤ 1024 px) ────────────────────────────── */
 @media (max-width: 1024px) {
 
     /* Hero: tablet — keep layout, shrink photo height */
     .hero-bio-grid { grid-template-columns: 1fr; gap: 0; }
     .hero-img-panel { height: 360px; }
-    .hero-card { padding: 32px 22px; }
+    .hero-card { padding: 32px 22px; margin-left: 0; }
 
     /* Reveal section: stack */
     .reveal-inner { grid-template-columns: 1fr; gap: 24px; }
@@ -1633,4 +1640,156 @@ input, select, textarea { font-family: inherit; }
 
     .enroll-grid { gap: 14px; }
     .btn-submit  { width: 100%; }
+}
+
+
+/* ── 16. New UI/UX enhancements ──────────────────────────────────────── */
+
+/* Scroll progress bar — sits at bottom edge of navbar */
+.scroll-progress {
+    position: absolute;
+    bottom: 0; left: 0;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--orange) 0%, #ffd080 60%, var(--orange) 100%);
+    background-size: 200% auto;
+    animation: shimmerBar 3s linear infinite;
+    z-index: 1001;
+    border-radius: 0 2px 2px 0;
+    transition: width 0.08s linear;
+}
+
+/* Class callout cards (Key Feature / The Vibe / Costume) */
+.class-callouts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+}
+.class-callout {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 11px 16px;
+    background: rgba(255, 122, 0, 0.045);
+    border: 1px solid rgba(255, 122, 0, 0.16);
+    border-left: 3px solid var(--orange);
+    border-radius: 0 10px 10px 0;
+    transition: background var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease);
+}
+.class-callout:hover {
+    background: rgba(255, 122, 0, 0.085);
+    border-color: rgba(255, 122, 0, 0.35);
+}
+.callout-label {
+    flex-shrink: 0;
+    min-width: 78px;
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--orange);
+    padding-top: 3px;
+    line-height: 1;
+}
+.callout-text {
+    font-size: 0.84rem;
+    color: var(--text-mid);
+    line-height: 1.65;
+}
+.callout-text em {
+    font-style: italic;
+    color: rgba(255, 220, 180, 0.92);
+}
+
+/* Class headings — Cormorant Garamond for elegance */
+.class-name {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+}
+
+/* Floating WhatsApp CTA button */
+.fab-whatsapp {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 890;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    box-shadow:
+        0 4px 20px rgba(37, 211, 102, 0.45),
+        0 2px 8px  rgba(0, 0, 0, 0.35);
+    transition:
+        transform 0.32s cubic-bezier(0.34, 1.7, 0.64, 1),
+        box-shadow 0.22s ease;
+}
+.fab-whatsapp svg { width: 28px; height: 28px; flex-shrink: 0; }
+.fab-whatsapp:hover {
+    transform: scale(1.18);
+    box-shadow: 0 8px 32px rgba(37, 211, 102, 0.65), 0 2px 8px rgba(0,0,0,.4);
+}
+/* Pulse ring */
+.fab-whatsapp::before {
+    content: '';
+    position: absolute;
+    inset: -7px;
+    border-radius: 50%;
+    border: 2px solid rgba(37, 211, 102, 0.5);
+    animation: fabPulse 2.4s ease-in-out infinite;
+    pointer-events: none;
+}
+@keyframes fabPulse {
+    0%, 100% { transform: scale(1);    opacity: 0.55; }
+    60%       { transform: scale(1.2); opacity: 0;    }
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    bottom: 100px;
+    right: 28px;
+    z-index: 890;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(14px);
+    transition:
+        opacity    0.3s  var(--ease),
+        transform  0.34s cubic-bezier(0.34, 1.7, 0.64, 1),
+        background 0.22s var(--ease),
+        box-shadow 0.22s var(--ease);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+.back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+.back-to-top:hover {
+    background: rgba(255, 122, 0, 0.18);
+    border-color: rgba(255, 122, 0, 0.45);
+    box-shadow: 0 4px 20px rgba(255, 122, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+/* On mobile hide back-to-top (WhatsApp FAB is enough) */
+@media (max-width: 768px) {
+    .fab-whatsapp { bottom: 20px; right: 20px; width: 52px; height: 52px; }
+    .back-to-top  { display: none; }
 }
